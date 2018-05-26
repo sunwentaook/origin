@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'goods:base2_handle' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+    <ul>
+        <li>
+            <label>商品类别</label>
+            <input type="text" name="ttitle">
+        </li>
+        <li>
+            <label>商品名</label>
+            <input type="text" name="gtitle">
+        </li>
+        <li>
+            <label>图片位置</label>
+            <input type="file" name="gpic">
+        </li>
+        <li>
+            <label>价格</label>
+            <input type="text" name="gprice">
+        </li>
+        <li>
+            <label>单位</label>
+            <input type="text" name="gunit">
+        </li>
+        <li>
+            <input type="submit" value="上传">
+        </li>
+    </ul>
+</form>
+</body>
+</html>
